@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Intersection Observer for general hidden elements
   const elements = document.querySelectorAll(".hidden");
   const observer = new IntersectionObserver(
     (entries) => {
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.1 } // Tampilkan saat 10% elemen terlihat
+    { threshold: 0.1 } 
   );
   elements.forEach((element) => {
     if (element) { // Pastikan elemen ada sebelum diobservasi
