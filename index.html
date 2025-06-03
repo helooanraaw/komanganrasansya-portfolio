@@ -3,153 +3,238 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Komang Anrasansya - Portfolio</title>
-    <link rel="icon" href="assets/alfgone.png">
-    <link rel="stylesheet" href="styles.css" />
+    <title>Komang Anrasansya - Professional Portfolio</title>
+    <link rel="icon" href="assets/alfgone.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="Menu hidden">
-        <img src="assets/Logo SMKN 1 Denpasar 2023.png" alt="Logo" />
-        <nav>
-          <ul>
-            <li><a href="#Pengenalan">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#SocialMedia">Contact</a></li>
+    <header class="site-header">
+      <div class="container menu-container">
+        <h2>helooanraaw</h2>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-navigation" id="mainNav"> <ul>
+            <li><a href="#IntroContainer">Home</a></li>
+            <li><a href="#About">About Me</a></li>
+            <li><a href="#Projects">Portfolio</a></li> <li><a href="#SocialMedia">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <div id="IntroContainer" class="hidden">
-        <div id="Pengenalan">
-          <section>
-            <div id="welcome" class="hidden">
-              <h1>Hello!</h1>
-              <h1>
-                I'm
-                <div id="Name">Komang Anrasansya</div>
-                Software Engineering, SMKN 1 Denpasar
-              </h1>
-              <p>Hubungi untuk informasi lebih lanjut</p>
+      <section id="IntroContainer" class="hero-section hidden">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="hero-greeting">Hello, I'm</span>
+            <h1 class="hero-name">Komang Anrasansya</h1>
+            <p class="hero-subtitle">
+              Software Developer & Technology Enthusiast from SMKN 1 Denpasar.
+            </p>
+            <p class="hero-description">
+              Exploring the intersection of design and functionality to create
+              impactful and intuitive digital solutions.
+            </p>
+            <div class="hero-cta">
+              <a href="assets/CV Anra.pdf" class="btn btn-primary" download
+                ><i class="fas fa-download"></i> Download My CV</a
+              >
+              <a
+                href="mailto:komanganrasansya21@gmail.com?subject=Project Discussion or Collaboration Opportunity&body=Hello Anra,%0D%0A%0D%0AI am interested in discussing..."
+                class="btn btn-secondary"
+                ><i class="fas fa-envelope"></i> Contact Me</a
+              >
             </div>
-            <div id="Contact" class="hidden">
-              <ul>
-                <li><a id="putih" href="assets/CV Anra.pdf">Download CV</a></li>
-                <li>
-                  <a href="mailto:komanganrasansya21@gmail.com?subject=Halo!&body=Halo, saya ingin bertanya tentang...">Gmail</a>
+          </div>
+          <div class="hero-image-container">
+            <img
+              src="assets/Anra2.png"
+              alt="Photo of Komang Anrasansya"
+              class="hero-image"
+              onerror="this.src='https://placehold.co/400x400/343A40/FFFFFF?text=Anra'"
+            />
+          </div>
+        </div>
+      </section>
 
-                </li>
-              </ul>
+      <section id="About" class="about-section hidden">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <p>
+              As a passionate and dedicated individual in the world of technology, I, <strong>I Nyoman Anrasansya Dharma Putra (Anra)</strong>, am currently pursuing my education at SMKN 1 Denpasar, focusing on Software Engineering. Born in Denpasar on April 9, 2009, my fascination with how technology can shape the future has driven me to continuously learn and grow. I believe that creative problem-solving and attention to detail are key to producing quality work.
+            </p>
+            <p>
+              Beyond academics and coding, I am an active individual who enjoys organizational activities, one of which is my participation in the school's Paskibra (flag-raising troop). I find a balance between technical logic and self-expression through hobbies like singing and playing the guitar. I am always enthusiastic about facing new challenges, collaborating on innovative projects, and contributing to technological advancements. This portfolio is a reflection of my journey, skills, and aspirations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Projects" class="projects-section hidden">
+        <div class="container">
+          <h2 class="section-title">Portfolio</h2>
+          <div class="project-carousel">
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <div class="project-card project-card-interactive">
+                  <div class="iframe-container iframe-main-visual">
+                    <iframe
+                      src="https://scratch.mit.edu/projects/1107983820/embed"
+                      allowtransparency="true"
+                      frameborder="0"
+                      scrolling="no"
+                      allowfullscreen
+                      title="Api Banaspati Game - Playable Scratch Project"
+                    ></iframe>
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Api Banaspati (Scratch Game)</h3>
+                    <p class="project-description">
+                      My first 2D survival game developed using Scratch. Dodge the mystical fireballs and test your reflexes. Play it directly here!
+                    </p>
+                    <span class="project-tags">Scratch, Game Development, Character Design</span>
+                  </div>
+                </div>
+                <div class="project-card">
+                  <div class="project-image-wrapper">
+                    <img
+                      src="assets/WebsitePortfolio.png"
+                      alt="Website Portfolio"
+                      class="project-image"
+                      onerror="this.src='https://placehold.co/600x400/343A40/FFFFFF?text=Portfolio'"
+                    />
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Personal Portfolio Website</h3>
+                    <p class="project-description">
+                      Development of a responsive portfolio website using HTML, CSS, and JavaScript to showcase work and skills.
+                    </p>
+                     <a href="#IntroContainer" class="btn btn-link project-view-link">View This Project</a>
+                    <span class="project-tags">HTML, CSS, JavaScript, Web Design, Responsive</span>
+                  </div>
+                </div>
+                <div class="project-card">
+                  <div class="project-image-wrapper">
+                    <img
+                      src="assets/CuanCerdasPortfolio.png"
+                      alt="Cuan Cerdas Game"
+                      class="project-image"
+                      onerror="this.src='https://placehold.co/600x400/343A40/FFFFFF?text=CuanCerdas'"
+                    />
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">CuanCerdas</h3>
+                    <p class="project-description">
+                      Development of an AI-driven financial education platform using React.js, Hapi (Node.js), and Scikit-learn to deliver personalized financial literacy, showcasing full-stack and AI development skills for the Coding Camp Indonesia capstone project.
+                    </p>
+                    <span class="project-tags">Figma, React, Hapi, Scikit-learn</span>
+                  </div>
+                </div>
+                <div class="project-card">
+                  <div class="project-image-wrapper">
+                    <img
+                      src="assets/CintaDaerahNusantara.png"
+                      alt="Cinta Daerah Nusantara App"
+                      class="project-image"
+                      onerror="this.src='https://placehold.co/600x400/343A40/FFFFFF?text=CINDAR'"
+                    />
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">CINDAR (Cinta Daerah Nusantara)</h3>
+                    <p class="project-description">
+                      An educational mobile application built with MIT App Inventor, designed to introduce users to the largest islands of Indonesia and their unique cultural aspects.
+                    </p>
+                    <span class="project-tags">MIT App Inventor, Mobile App, Education, Indonesian Culture</span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </section>
+            <button class="carousel-button prev" aria-label="Previous Project">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-button next" aria-label="Next Project">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
-        <div id="AnraPhoto">
-          <img src="assets/Anra2.png" alt="PhotoAnra" />
+      </section>
+
+      <section id="SocialMedia" class="social-media-section hidden">
+        <div class="container">
+          <h2 class="section-title">Connect With Me</h2>
+          <p class="section-subtitle">
+            Let's discuss further or simply exchange greetings through the following platforms:
+          </p>
+          <div class="social-icons-container">
+            <a href="https://www.instagram.com/kmnganrasansy_" target="_blank" aria-label="Komang Anrasansya's Instagram" class="social-icon-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/helooanraaw" target="_blank" aria-label="helooanraaw's GitHub" class="social-icon-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/komanganrasansya" target="_blank" aria-label="Komang Anrasansya's LinkedIn" class="social-icon-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+             <a href="http://wa.me/6285792288058" target="_blank" aria-label="Komang Anrasansya's WhatsApp" class="social-icon-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:komanganrasansya21@gmail.com" aria-label="Email Komang Anrasansya" class="social-icon-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
         </div>
-      </div>
-      <hr class="animated-hr">
-
-      <div class="tentang hidden" id="About">
-        <h1>About</h1>
-        <p>
-          Halo semuanya, kenalin nama saya <mark>I Nyoman Anrasansya Dharma Putra</mark>,
-          bisa dipanggil <mark>Anra</mark>. Umur saya <mark>15 tahun</mark>, saya lahir di <mark>Denpasar, Bali</mark>
-          pada tanggal <mark>09 April 2009</mark>. Saya tinggal di Renon di <mark>Jl. Tukad Citarum
-          M Blok M No 9B</mark>. Saya dulu TK di <mark>PAUD Kumara Loka</mark>, dan melanjutkan SD
-          di <mark>SDN 4 Panjer</mark>. Saya melanjutkan SMP di <mark>SMP Ganesha Denpasar</mark>, dan
-          untuk saat ini saya bersekolah di <mark>SMKN 1 Denpasar</mark>, tepatnya di
-          Denpasar Utara, Ubung. Sekarang, saya kelas 10 dengan mengambil
-          jurusan <mark>Rekayasa Perangkat Lunak (RPL)</mark>.
-          <br /><br />
-          Alasan saya memasuki jurusan ini karena peluang karir kerja yang luas
-          dan ketertarikan saya dalam teknologi. Kebetulan, saya juga mengikuti
-          ekstra kurikuler robotik dan paskibra. Saya berharap dapat menjadi
-          bagian dari paskibraka Kota Denpasar, dan jika ada kesempatan, saya
-          ingin melanjutkan hingga paskibraka provinsi atau bahkan nasional.
-          Semoga saya bisa mencapai impian ini, astungkara!
-        </p>
-      </div>
-      
-      <div class="background hidden">
-      <div class="project hidden">
-        <h1>Project</h1>
-        <div class="project1 hidden">
-            <img src="assets/PosterGame.jpeg" alt="PosterGame">
-            <div class="project-text">
-                <p>Ini adalah game pertama yang saya buat, dan rasanya luar biasa! Awalnya ragu, tapi prosesnya justru seru dan penuh tantangan.
-
-                  Game ini berjudul <strong>"Api Banaspati"</strong>, terinspirasi dari legenda bola api mistis. Sebagai petualang, kamu harus bertahan hidup dengan menghindari bola api yang semakin cepat dan banyak. Gameplay-nya simpel tapi menegangkan!
-                  
-                  Dari merancang konsep, menggambar karakter, hingga menulis kode, setiap langkahnya memberi pengalaman berharga. Meski masih sederhana, ini jadi awal perjalanan saya di dunia game development. Ke depannya, saya ingin menambahkan level, power-up, dan mode multiplayer!
-                </p>
-                <iframe src="https://scratch.mit.edu/projects/1107983820/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <!-- SOCIAL MEDIA SECTION -->
-<div class="social-media-container hidden" id="SocialMedia">
-  <h2>Temukan Saya di Sosial Media</h2>
-  <hr class="animated-hr">
-  <div class="social-media-slider hidden">
-      <div class="social-icons">
-          <a href="https://open.spotify.com/user/31kd2qyrxgjobgzf32ptfdhyqvu4?si=551e24687f344841" target="_blank"><img src="assets/spotify.png" alt="Spotify"></a>
-          <a href="https://www.instagram.com/kmnganrasansy_ target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
-          <a href="https://github.com/helooanraaw" target="_blank"><img src="assets/github.png" alt="GitHub"></a>
-          <a href="https://www.youtube.com/@helooanraaw" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
-          <a href="https://www.linkedin.com/in/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn"></a>
-          <a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
-          <a href="https://discord.com/users/anraaw" target="_blank"><img src="assets/discord.png" alt="Discord"></a>
-          <a href="https://www.tiktok.com/@anraaw" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
-      </div>
-  </div>
-</div>
-      </div>
+      </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-container hidden">
-        <div class="footer-section footer-logo">
-          <img src="assets/Logo SMKN 1 Denpasar 2023.png" alt="Logo" />
-          <p>SMKN 1 Denpasar</p>
+    <footer class="site-footer hidden">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-about">
+            <h3 class="footer-brand-name">Komang Anrasansya</h3>
+            <p class="footer-tagline">
+              Software Developer. Technology Enthusiast. Lifelong Learner.
+            </p>
+            <div class="footer-social-links">
+              <a href="https://www.instagram.com/kmnganrasansy_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/helooanraaw" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/komanganrasansya" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-navigation">
+            <h4 class="footer-section-title">Navigation</h4>
+            <ul>
+              <li><a href="#IntroContainer">Home</a></li>
+              <li><a href="#About">About Me</a></li>
+              <li><a href="#Projects">Portfolio</a></li> <li><a href="#SocialMedia">Direct Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="footer-section-title">Contact Me</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Denpasar, Bali, Indonesia</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:komanganrasansya21@gmail.com">komanganrasansya21@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="http://wa.me/6285792288058">+62 857 9228 8058</a></p>
+          </div>
         </div>
-        <div class="footer-section footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#Pengenalan">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> Komang Anrasansya. Designed & Developed with ❤️.
+          </p>
         </div>
-        <div class="footer-section footer-social">
-          <h3>Follow Me</h3>
-          <ul>
-            <li><a href="http://wa.me/6285792288058">WhatsApp</a></li>
-            <li>
-              <a href="https://www.instagram.com/kmnganrasansy_">Instagram</a>
-            </li>
-            <li><a href="https://github.com/helooanraaw">Github</a></li>
-          </ul>
-        </div>
-        <div class="footer-section footer-contact">
-          <h3>Contact</h3>
-          <p>Email: komanganrasansya@email.com</p>
-          <p>Jl. Tukad Citarum M Blok M No 9B</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 Komang Anrasansya | All Rights Reserved</p>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
