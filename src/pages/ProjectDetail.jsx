@@ -6,14 +6,14 @@ import {
   ChevronRight, ChevronLeft, Gamepad2
 } from 'lucide-react'
 
-const getProjectCategory = (title) => {
+const getProjectType = (title) => {
   const t = title?.toLowerCase() || '';
-  if (t.includes('cuancerdas')) return 'Edukasi Finansial / AI';
-  if (t.includes('tarupramana')) return 'Kesehatan / Capstone';
-  if (t.includes('skensamotohub')) return 'ERP / Manajemen Bengkel';
-  if (t.includes('kas-app')) return 'Keuangan / Utilitas';
-  if (t.includes('banaspati')) return 'Game 2D / Survival';
-  return 'Aplikasi Web';
+  if (t.includes('cuancerdas')) return 'Capstone Project';
+  if (t.includes('tarupramana')) return 'Capstone Project';
+  if (t.includes('skensamotohub')) return 'School Project';
+  if (t.includes('kas-app')) return 'Personal Project';
+  if (t.includes('banaspati')) return 'Experimental Game';
+  return 'Personal Project';
 }
 
 const getProjectPlatform = (title) => {
@@ -169,8 +169,8 @@ export default function ProjectDetail() {
                 <span className="block text-sm font-black uppercase tracking-tight">{new Date(project.created_at).getFullYear()}</span>
               </div>
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Klasifikasi</span>
-                <span className="block text-sm font-black uppercase tracking-tight">{getProjectCategory(project.title)}</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Tipe Proyek</span>
+                <span className="block text-sm font-black uppercase tracking-tight">{getProjectType(project.title)}</span>
               </div>
               <div className="space-y-1">
                 <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Platform</span>
