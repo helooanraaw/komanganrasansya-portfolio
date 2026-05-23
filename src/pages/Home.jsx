@@ -301,7 +301,7 @@ export default function Home() {
 
               <SwissStar className="absolute -bottom-8 -right-8 w-16 h-16 text-accent z-20" />
               <SwissCircle className="absolute -top-8 -left-8 w-20 h-20 text-text-primary opacity-[0.05] z-0" />
-              <SwissDataLabel label="ID_Profil" value="001-ANRA-2026" className="absolute -bottom-16 left-0" />
+              <SwissDataLabel label="ID_Profil" value={`${String(currentProfileIdx + 1).padStart(3, '0')}-ANRA-2026`} className="absolute -bottom-16 left-0" />
             </div>
           </div>
           <div className="col-span-4 md:col-span-7 lg:col-start-6 space-y-12 text-left relative">
@@ -329,7 +329,7 @@ export default function Home() {
           <div className="col-span-4 md:col-span-8 text-left relative">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-8 h-px bg-accent"></div>
-              <div className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Keahlian Teknis</div>
+              <div className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Teknis</div>
             </div>
             <h2 className="text-headline tracking-tighter">TECH STACK.</h2>
           </div>
