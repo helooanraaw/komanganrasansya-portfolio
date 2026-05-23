@@ -469,34 +469,44 @@ export default function Home() {
         <SwissLine className="absolute right-12 top-0 w-px h-full bg-border/20" />
         
         <div className="fade-up grid-system relative z-10 items-center">
-          <div className="col-span-4 md:col-span-12 lg:col-span-5 text-left space-y-12 mb-16 lg:mb-0">
+          <div className="col-span-4 md:col-span-12 lg:col-span-5 text-left space-y-8 mb-16 lg:mb-0">
             <div>
               <div className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent mb-6">SOUNDTRACK</div>
-              <h2 className="text-headline tracking-tighter">PLAYLIST SAYA.</h2>
+              <h2 className="text-headline tracking-tighter">PLAYLIST SPOTIFY.</h2>
             </div>
             
-            <p className="text-lg text-text-secondary leading-relaxed max-w-lg">
-              Berikut adalah beberapa lagu favorit dan musik yang menemani saya saat menulis baris-baris kode, merancang arsitektur database, dan mengasah keterampilan saya. Musik membantu saya mempertahankan fokus dan kreativitas.
+            <p className="text-sm text-text-secondary leading-relaxed max-w-lg">
+              Ini adalah playlist Spotify saya yang berisi lagu-lagu pilihan untuk menemani fokus saat koding.
             </p>
 
-            <div className="flex flex-col gap-6 font-mono text-[9px] text-text-muted uppercase tracking-[0.2em]">
-              <div className="flex items-center gap-4">
-                <span className="w-20 text-accent font-bold">PLATFORM:</span>
-                <span>SPOTIFY PREMIUM</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="w-20 text-accent font-bold">PLAYLIST ID:</span>
-                <span>5KlJLq6QyiuBWvwmnC3kvi</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="w-20 text-accent font-bold">SUMBER:</span>
-                <a href="https://open.spotify.com/playlist/5KlJLq6QyiuBWvwmnC3kvi?si=af8c0f326b544ef3" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline transition-colors">BUKA DI APLIKASI</a>
+            <div className="space-y-4 pt-4 border-t border-border">
+              <div className="font-mono text-[9px] text-accent font-bold uppercase tracking-[0.3em]">LAGU FAVORIT :</div>
+              <div className="space-y-3">
+                {[
+                  { rank: '01', title: 'Apocalypse', artist: 'Cigarettes After Sex' },
+                  { rank: '02', title: 'K.', artist: 'Cigarettes After Sex' },
+                  { rank: '03', title: 'Sunsetz', artist: 'Cigarettes After Sex' },
+                  { rank: '04', title: 'Cry', artist: 'Cigarettes After Sex' }
+                ].map((track) => (
+                  <div key={track.rank} className="flex justify-between items-center py-2 border-b border-border/20 group/track">
+                    <div className="flex gap-4 items-center">
+                      <span className="font-mono text-[9px] text-accent">{track.rank}</span>
+                      <div className="text-left">
+                        <div className="text-[12px] font-black uppercase tracking-tight text-text-primary group-hover/track:text-accent transition-colors">{track.title}</div>
+                        <div className="text-[9px] text-text-muted uppercase tracking-widest mt-0.5">{track.artist}</div>
+                      </div>
+                    </div>
+                    <span className="font-mono text-[7px] text-accent opacity-0 group-hover/track:opacity-100 transition-opacity uppercase tracking-widest border border-accent/30 px-2 py-0.5">
+                      FAVORITE
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="flex items-center gap-6 mt-12">
+            <div className="flex items-center gap-6 pt-6">
               <SwissLine className="w-32 h-1 bg-accent" />
-              <span className="font-mono text-[8px] text-text-muted tracking-[0.4em]">SOUNDS / CREATIVITY</span>
+              <span className="font-mono text-[8px] text-text-muted tracking-[0.4em]">SOUNDS / FOCUS</span>
             </div>
           </div>
 
