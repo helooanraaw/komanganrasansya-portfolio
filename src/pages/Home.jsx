@@ -82,6 +82,7 @@ export default function Home() {
   const [prevProfileIdx, setPrevProfileIdx] = useState(null)
   const [loading, setLoading] = useState(true)
   const [isLightMode, setIsLightMode] = useState(false)
+  const [spotifyEmbedUrl, setSpotifyEmbedUrl] = useState('https://open.spotify.com/embed/playlist/5KlJLq6QyiuBWvwmnC3kvi?utm_source=generator&theme=0')
 
   const heroReveal = useScrollReveal()
   const aboutReveal = useScrollReveal()
@@ -472,7 +473,17 @@ export default function Home() {
           <div className="col-span-4 md:col-span-12 lg:col-span-5 text-left space-y-8 mb-16 lg:mb-0">
             <div>
               <div className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent mb-6">SOUNDTRACK</div>
-              <h2 className="text-headline tracking-tighter">PLAYLIST SPOTIFY.</h2>
+              <div className="flex justify-between items-end gap-4">
+                <h2 className="text-headline tracking-tighter">PLAYLIST SPOTIFY.</h2>
+                {spotifyEmbedUrl !== 'https://open.spotify.com/embed/playlist/5KlJLq6QyiuBWvwmnC3kvi?utm_source=generator&theme=0' && (
+                  <button 
+                    onClick={() => setSpotifyEmbedUrl('https://open.spotify.com/embed/playlist/5KlJLq6QyiuBWvwmnC3kvi?utm_source=generator&theme=0')}
+                    className="font-mono text-[9px] text-accent hover:underline uppercase tracking-widest cursor-pointer mb-2"
+                  >
+                    &larr; PLAYLIST_UTAMA
+                  </button>
+                )}
+              </div>
             </div>
             
             <p className="text-sm text-text-secondary leading-relaxed max-w-lg">
@@ -483,13 +494,17 @@ export default function Home() {
               <div className="font-mono text-[9px] text-accent font-bold uppercase tracking-[0.3em]">LAGU FAVORIT :</div>
               <div className="space-y-3">
                 {[
-                  { rank: '01', title: 'Shape Of My Heart', artist: 'Backstreet Boys', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
-                  { rank: '02', title: 'My Love', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
-                  { rank: '03', title: 'I Lay My Love On You (Remix)', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
-                  { rank: '04', title: 'Natural', artist: 'D\'Masiv', genre: 'POP ROCK', color: 'text-amber-500 border-amber-500/30 bg-amber-500/5' },
-                  { rank: '05', title: 'Did You Like Her In The Morning?', artist: 'NIKI', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' }
+                  { rank: '01', title: 'Shape Of My Heart', artist: 'Backstreet Boys', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '35o9a4iAfLl5jRmqMX9c1D' },
+                  { rank: '02', title: 'My Love', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '34wY1gOQ6u4y7mY8m9d9cQ' },
+                  { rank: '03', title: 'I Lay My Love On You (Remix)', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '24e3D5JU8ETOVouTcTD96r' },
+                  { rank: '04', title: 'Natural', artist: 'D\'Masiv', genre: 'POP ROCK', color: 'text-amber-500 border-amber-500/30 bg-amber-500/5', trackId: '54k16K8W0nQn36Z0Qj7x7J' },
+                  { rank: '05', title: 'Did You Like Her In The Morning?', artist: 'NIKI', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '0i2pZ0T436W45z19hVj2tG' }
                 ].map((track) => (
-                  <div key={track.rank} className="flex justify-between items-center py-2 border-b border-border/20 group/track">
+                  <button 
+                    key={track.rank} 
+                    onClick={() => setSpotifyEmbedUrl(`https://open.spotify.com/embed/track/${track.trackId}?utm_source=generator&theme=0`)}
+                    className="w-full flex justify-between items-center py-2 border-b border-border/20 group/track cursor-pointer hover:bg-bg-secondary/30 transition-colors text-left"
+                  >
                     <div className="flex gap-4 items-center">
                       <span className="font-mono text-[9px] text-accent">{track.rank}</span>
                       <div className="text-left">
@@ -500,7 +515,7 @@ export default function Home() {
                     <span className={`font-mono text-[7px] opacity-0 group-hover/track:opacity-100 group-hover/track:scale-105 transition-all duration-300 uppercase tracking-widest border px-2 py-0.5 ${track.color}`}>
                       {track.genre}
                     </span>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
@@ -510,10 +525,10 @@ export default function Home() {
                 <span className="text-accent font-bold">TOTAL:</span> 451 LAGU
               </div>
               <div>
-                <span className="text-accent font-bold">AKSES:</span> PUBLIK
+                <span className="text-accent font-bold">KURATOR:</span> ANRA
               </div>
               <div>
-                <span className="text-accent font-bold">DIPUTAR:</span> SETIAP_HARI
+                <span className="text-accent font-bold">MOOD:</span> FOKUS
               </div>
             </div>
 
@@ -524,7 +539,7 @@ export default function Home() {
             <div className="border-4 border-text-primary p-2 bg-black shadow-2xl relative group">
               <div className="absolute -inset-2 border border-accent/20 pointer-events-none"></div>
               <iframe 
-                src="https://open.spotify.com/embed/playlist/5KlJLq6QyiuBWvwmnC3kvi?utm_source=generator&theme=0" 
+                src={spotifyEmbedUrl} 
                 width="100%" 
                 height="450" 
                 frameBorder="0" 
