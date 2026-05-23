@@ -476,7 +476,7 @@ export default function Home() {
             </div>
             
             <p className="text-sm text-text-secondary leading-relaxed max-w-lg">
-              Ini adalah playlist Spotify saya yang berisi lagu-lagu pilihan untuk menemani fokus saat koding.
+              Musik yang menemani saya di mana pun berada, baik saat sedang fokus menulis baris kode maupun dalam menjalani keseharian.
             </p>
 
             <div className="space-y-4 pt-4 border-t border-border">
