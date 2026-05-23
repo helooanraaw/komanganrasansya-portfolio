@@ -112,7 +112,7 @@ export default function Home() {
   }
 
   const typewriterText = useTypewriter([
-    "Pengembang Fullstack",
+    "Fullstack",
     "UI/UX Enthusiast",
     "Halo Semuanya!",
     "Siswa SMK Negeri 1 Denpasar"
@@ -240,7 +240,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 relative">
               <div className="space-y-12">
                 <p className="text-xl font-medium text-text-secondary uppercase leading-tight tracking-tight max-w-lg fade-up stagger-3">
-                  Membangun lingkungan digital yang terstruktur dan aplikasi berkinerja tinggi. Siswa SMK Negeri 1 Denpasar yang berfokus pada arsitektur bersih dan desain fungsional.
+                  Membangun aplikasi web dan mobile dengan arsitektur bersih dan basis data terstruktur. Siswa RPL di SMK Negeri 1 Denpasar yang mengombinasikan keahlian teknis dan kepemimpinan.
                 </p>
 
                 <div className="flex gap-4 pt-4 fade-up stagger-4">
