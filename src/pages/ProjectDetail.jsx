@@ -16,10 +16,14 @@ const getProjectCategory = (title) => {
   return 'Aplikasi Web';
 }
 
-const getProjectStatus = (title) => {
+const getProjectPlatform = (title) => {
   const t = title?.toLowerCase() || '';
-  if (t.includes('cuancerdas') || t.includes('tarupramana')) return 'Selesai (Capstone)';
-  return 'Selesai';
+  if (t.includes('cuancerdas')) return 'Web Application';
+  if (t.includes('tarupramana')) return 'Web Application';
+  if (t.includes('skensamotohub')) return 'Web App (Local Server)';
+  if (t.includes('kas-app')) return 'Web Application';
+  if (t.includes('banaspati')) return 'Web / Scratch Playable';
+  return 'Web Application';
 }
 
 export default function ProjectDetail() {
@@ -140,7 +144,7 @@ export default function ProjectDetail() {
             <div className="flex-1 space-y-8">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-px bg-accent"></div>
-                <span className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Proyek Pilihan</span>
+                <span className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Project</span>
               </div>
               <h1 className="text-5xl md:text-9xl font-black leading-[0.85] uppercase tracking-tighter break-words">
                 {project.title}
@@ -169,8 +173,8 @@ export default function ProjectDetail() {
                 <span className="block text-sm font-black uppercase tracking-tight">{getProjectCategory(project.title)}</span>
               </div>
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Status Proyek</span>
-                <span className="block text-sm font-black uppercase tracking-tight">{getProjectStatus(project.title)}</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Platform</span>
+                <span className="block text-sm font-black uppercase tracking-tight">{getProjectPlatform(project.title)}</span>
               </div>
             </div>
           </div>
