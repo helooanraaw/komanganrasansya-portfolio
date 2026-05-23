@@ -504,10 +504,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex items-center gap-6 pt-6">
-              <SwissLine className="w-32 h-1 bg-accent" />
-              <span className="font-mono text-[8px] text-text-muted tracking-[0.4em]">SOUNDS / FOCUS</span>
-            </div>
+
           </div>
 
           <div className="col-span-4 md:col-span-12 lg:col-start-7 lg:col-span-6 relative">
