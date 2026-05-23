@@ -495,10 +495,10 @@ export default function Home() {
               <div className="space-y-3">
                 {[
                   { rank: '01', title: 'Shape Of My Heart', artist: 'Backstreet Boys', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '35o9a4iAfLl5jRmqMX9c1D' },
-                  { rank: '02', title: 'My Love', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '34wY1gOQ6u4y7mY8m9d9cQ' },
+                  { rank: '02', title: 'My Love', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '301y5sB3f99e4qG4z0516m' },
                   { rank: '03', title: 'I Lay My Love On You (Remix)', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '24e3D5JU8ETOVouTcTD96r' },
-                  { rank: '04', title: 'Natural', artist: 'D\'Masiv', genre: 'POP ROCK', color: 'text-amber-500 border-amber-500/30 bg-amber-500/5', trackId: '54k16K8W0nQn36Z0Qj7x7J' },
-                  { rank: '05', title: 'Did You Like Her In The Morning?', artist: 'NIKI', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '0i2pZ0T436W45z19hVj2tG' }
+                  { rank: '04', title: 'Natural', artist: 'D\'Masiv', genre: 'POP ROCK', color: 'text-amber-500 border-amber-500/30 bg-amber-500/5', trackId: '1P56xH8YxWwKqJkXyYg7wG' },
+                  { rank: '05', title: 'Did You Like Her In The Morning?', artist: 'NIKI', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5', trackId: '4jV7b41qR8yJ7k2qM2f8vO' }
                 ].map((track) => (
                   <button 
                     key={track.rank} 
