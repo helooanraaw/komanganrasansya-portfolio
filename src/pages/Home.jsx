@@ -476,7 +476,7 @@ export default function Home() {
             </div>
             
             <p className="text-sm text-text-secondary leading-relaxed max-w-lg">
-              Musik yang menemani saya di mana pun berada, baik saat sedang fokus menulis baris kode maupun dalam menjalani keseharian.
+              Musik yang menemani saya di mana pun berada, baik saat sedang fokus maupun dalam menjalani aktivitas sehari-hari.
             </p>
 
             <div className="space-y-4 pt-4 border-t border-border">
