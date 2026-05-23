@@ -496,7 +496,7 @@ export default function Home() {
                         <div className="text-[9px] text-text-muted uppercase tracking-widest mt-0.5">{track.artist}</div>
                       </div>
                     </div>
-                    <span className={`font-mono text-[7px] opacity-75 group-hover/track:opacity-100 group-hover/track:scale-105 transition-all duration-300 uppercase tracking-widest border px-2 py-0.5 ${track.color}`}>
+                    <span className={`font-mono text-[7px] opacity-0 group-hover/track:opacity-100 group-hover/track:scale-105 transition-all duration-300 uppercase tracking-widest border px-2 py-0.5 ${track.color}`}>
                       {track.genre}
                     </span>
                   </div>
