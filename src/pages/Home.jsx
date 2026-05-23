@@ -483,10 +483,11 @@ export default function Home() {
               <div className="font-mono text-[9px] text-accent font-bold uppercase tracking-[0.3em]">LAGU FAVORIT :</div>
               <div className="space-y-3">
                 {[
-                  { rank: '01', title: 'Apocalypse', artist: 'Cigarettes After Sex', genre: 'DREAM POP', color: 'text-pink-400 border-pink-400/30 bg-pink-400/5' },
-                  { rank: '02', title: 'K.', artist: 'Cigarettes After Sex', genre: 'SLOWCORE', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
-                  { rank: '03', title: 'Sunsetz', artist: 'Cigarettes After Sex', genre: 'INDIE POP', color: 'text-amber-500 border-amber-500/30 bg-amber-500/5' },
-                  { rank: '04', title: 'Cry', artist: 'Cigarettes After Sex', genre: 'AMBIENT', color: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/5' }
+                  { rank: '01', title: 'Shape Of My Heart', artist: 'Backstreet Boys', genre: 'POP CLASSIC', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
+                  { rank: '02', title: 'My Love', artist: 'Westlife', genre: 'BALLAD', color: 'text-pink-400 border-pink-400/30 bg-pink-400/5' },
+                  { rank: '03', title: 'I Lay My Love On You (Remix)', artist: 'Westlife', genre: 'DANCE POP', color: 'text-purple-400 border-purple-400/30 bg-purple-400/5' },
+                  { rank: '04', title: 'Natural', artist: 'D\'Masiv', genre: 'POP ROCK', color: 'text-amber-500 border-amber-500/30 bg-amber-500/5' },
+                  { rank: '05', title: 'Did You Like Her In The Morning?', artist: 'NIKI', genre: 'INDIE R&B', color: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/5' }
                 ].map((track) => (
                   <div key={track.rank} className="flex justify-between items-center py-2 border-b border-border/20 group/track">
                     <div className="flex gap-4 items-center">
@@ -501,6 +502,18 @@ export default function Home() {
                     </span>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            <div className="flex gap-8 pt-6 font-mono text-[9px] text-text-muted uppercase tracking-[0.2em] border-t border-border/20">
+              <div>
+                <span className="text-accent font-bold">TOTAL:</span> 451 LAGU
+              </div>
+              <div>
+                <span className="text-accent font-bold">AKSES:</span> PUBLIK
+              </div>
+              <div>
+                <span className="text-accent font-bold">DIPUTAR:</span> SETIAP_HARI
               </div>
             </div>
 
