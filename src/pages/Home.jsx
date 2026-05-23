@@ -468,17 +468,26 @@ export default function Home() {
 
         <div className="col-span-4 md:col-span-12 lg:col-start-3 lg:col-span-8 space-y-16 z-10">
           <div className="flex flex-col items-center gap-6">
-             <SwissDataLabel label="Komunikasi" value="SALURAN_TERENKRIPSI" className="items-center" />
+             <SwissDataLabel label="Koneksi" value="KOLABORASI_AKTIF" className="items-center" />
           </div>
           <h2 className="text-display leading-[0.8] mb-12 uppercase tracking-tighter">HUBUNGI<br /><span className="text-accent">SAYA.</span></h2>
           
           <div className="flex flex-col items-center gap-12">
-            <a href="mailto:komanganrasansya21@gmail.com" className="magnetic-btn group border-2 border-text-primary bg-transparent text-text-primary px-10 py-5 font-black uppercase tracking-widest text-[11px] transition-all duration-500 hover:bg-accent hover:border-accent hover:text-white relative overflow-hidden">
-              <span className="relative z-10 flex items-center">
-                Kirim Pesan <ArrowRight className="ml-4 group-hover:translate-x-2 transition-transform" size={16} />
-              </span>
-              <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-6 w-full max-w-xl justify-center">
+              <a href="mailto:komanganrasansya21@gmail.com" className="magnetic-btn group border-2 border-text-primary bg-transparent text-text-primary px-10 py-5 font-black uppercase tracking-widest text-[11px] transition-all duration-500 hover:bg-accent hover:border-accent hover:text-white relative overflow-hidden flex-1 text-center">
+                <span className="relative z-10 flex items-center justify-center">
+                  Kirim Email <ArrowRight className="ml-4 group-hover:translate-x-2 transition-transform" size={16} />
+                </span>
+                <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              </a>
+              
+              <a href="https://wa.me/6285792288058" target="_blank" rel="noopener noreferrer" className="magnetic-btn group border-2 border-text-primary bg-transparent text-text-primary px-10 py-5 font-black uppercase tracking-widest text-[11px] transition-all duration-500 hover:bg-accent hover:border-accent hover:text-white relative overflow-hidden flex-1 text-center">
+                <span className="relative z-10 flex items-center justify-center">
+                  WhatsApp <ArrowRight className="ml-4 group-hover:translate-x-2 transition-transform" size={16} />
+                </span>
+                <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              </a>
+            </div>
             
             <div className="flex flex-col md:flex-row gap-12 border-t border-border pt-24 w-full justify-center relative">
               <SwissLine className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
