@@ -10,18 +10,15 @@ const getProjectType = (title) => {
   const t = title?.toLowerCase() || '';
   if (t.includes('cuancerdas')) return 'Capstone Project';
   if (t.includes('tarupramana')) return 'Capstone Project';
-  if (t.includes('skensamotohub')) return 'School Project';
-  if (t.includes('kas-app')) return 'Personal Project';
-  if (t.includes('banaspati')) return 'Experimental Game';
+  if (t.includes('skensamotohub') || t.includes('navigara') || t.includes('siventaris')) return 'School Project';
+  if (t.includes('kas-app') || t.includes('openkas') || t.includes('banaspati')) return 'Personal Project';
   return 'Personal Project';
 }
 
 const getProjectPlatform = (title) => {
   const t = title?.toLowerCase() || '';
-  if (t.includes('cuancerdas')) return 'Web Application';
-  if (t.includes('tarupramana')) return 'Web Application';
+  if (t.includes('cuancerdas') || t.includes('tarupramana') || t.includes('kas-app') || t.includes('openkas') || t.includes('navigara') || t.includes('siventaris')) return 'Web Application';
   if (t.includes('skensamotohub')) return 'Web App (Local Server)';
-  if (t.includes('kas-app')) return 'Web Application';
   if (t.includes('banaspati')) return 'Web / Scratch Playable';
   return 'Web Application';
 }
