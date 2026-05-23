@@ -141,19 +141,19 @@ export default function ProjectDetail() {
 
             <div className="grid grid-cols-2 gap-x-12 gap-y-6 md:min-w-[400px] border-l border-border pl-12">
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Fungsi</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Peran</span>
                 <span className="block text-sm font-black uppercase tracking-tight">{project.role || 'Pengembang'}</span>
               </div>
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Tahun</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Tahun Rilis</span>
                 <span className="block text-sm font-black uppercase tracking-tight">{new Date(project.created_at).getFullYear()}</span>
               </div>
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Status</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Status Proyek</span>
                 <span className="block text-sm font-black uppercase tracking-tight">Siap Dirilis</span>
               </div>
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Referensi</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">ID Proyek</span>
                 <span className="block text-sm font-black uppercase tracking-tight">#{id.substring(0,6).toUpperCase()}</span>
               </div>
             </div>
