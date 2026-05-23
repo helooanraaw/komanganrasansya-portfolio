@@ -6,6 +6,22 @@ import {
   ChevronRight, ChevronLeft, Gamepad2
 } from 'lucide-react'
 
+const getProjectCategory = (title) => {
+  const t = title?.toLowerCase() || '';
+  if (t.includes('cuancerdas')) return 'Edukasi Finansial / AI';
+  if (t.includes('tarupramana')) return 'Kesehatan / Capstone';
+  if (t.includes('skensamotohub')) return 'ERP / Manajemen Bengkel';
+  if (t.includes('kas-app')) return 'Keuangan / Utilitas';
+  if (t.includes('banaspati')) return 'Game 2D / Survival';
+  return 'Aplikasi Web';
+}
+
+const getProjectStatus = (title) => {
+  const t = title?.toLowerCase() || '';
+  if (t.includes('cuancerdas') || t.includes('tarupramana')) return 'Selesai (Capstone)';
+  return 'Selesai';
+}
+
 export default function ProjectDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
@@ -141,20 +157,20 @@ export default function ProjectDetail() {
 
             <div className="grid grid-cols-2 gap-x-12 gap-y-6 md:min-w-[400px] border-l border-border pl-12">
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Peran</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Kontribusi</span>
                 <span className="block text-sm font-black uppercase tracking-tight">{project.role || 'Pengembang'}</span>
               </div>
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Tahun Rilis</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Diluncurkan</span>
                 <span className="block text-sm font-black uppercase tracking-tight">{new Date(project.created_at).getFullYear()}</span>
               </div>
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Status Proyek</span>
-                <span className="block text-sm font-black uppercase tracking-tight">Siap Dirilis</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Klasifikasi</span>
+                <span className="block text-sm font-black uppercase tracking-tight">{getProjectCategory(project.title)}</span>
               </div>
               <div className="space-y-1">
-                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">ID Proyek</span>
-                <span className="block text-sm font-black uppercase tracking-tight">#{id.substring(0,6).toUpperCase()}</span>
+                <span className="block font-mono text-[9px] uppercase tracking-widest text-text-muted">Status Proyek</span>
+                <span className="block text-sm font-black uppercase tracking-tight">{getProjectStatus(project.title)}</span>
               </div>
             </div>
           </div>
