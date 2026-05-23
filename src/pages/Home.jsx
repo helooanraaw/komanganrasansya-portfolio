@@ -491,7 +491,7 @@ export default function Home() {
           <div className="col-span-4 md:col-span-12 lg:col-span-5 text-left space-y-8 mb-16 lg:mb-0">
             <div>
               <div className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent mb-6">SOUNDTRACK</div>
-              <h2 className="text-headline tracking-tighter">PLAYLIST SPOTIFY.</h2>
+              <h2 className="text-headline tracking-tighter">PLAYLIST <span className="text-[#1DB954]">SPOTIFY.</span></h2>
             </div>
             
             <p className="text-sm text-text-secondary leading-relaxed max-w-lg">
