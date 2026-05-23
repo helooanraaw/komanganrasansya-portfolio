@@ -92,12 +92,14 @@ export default function Home() {
   const skillsHeaderReveal = useScrollReveal()
   const projectsHeaderReveal = useScrollReveal()
   const expHeaderReveal = useScrollReveal()
+  const spotifyReveal = useScrollReveal()
   const contactReveal = useScrollReveal()
 
   const aboutRef = useRef(null)
   const skillsRef = useRef(null)
   const projectsRef = useRef(null)
   const experienceRef = useRef(null)
+  const spotifyRef = useRef(null)
   const contactRef = useRef(null)
 
   const scrollTo = (ref) => ref.current?.scrollIntoView({ behavior: 'smooth' })
@@ -191,6 +193,7 @@ export default function Home() {
             { name: 'Keahlian', ref: skillsRef },
             { name: 'Proyek', ref: projectsRef },
             { name: 'Pengalaman', ref: experienceRef },
+            { name: 'Musik', ref: spotifyRef },
             { name: 'Kontak', ref: contactRef }
           ].map((item) => (
             <button 
@@ -459,6 +462,62 @@ export default function Home() {
         </div>
       </section>
 
+      <section ref={spotifyReveal} className="py-48 border-b border-border relative overflow-hidden bg-bg-secondary/10 transition-colors duration-500">
+        <div ref={spotifyRef} className="absolute top-0 left-0 w-full h-1" />
+        <SwissHeadingText text="MUSIK" className="-bottom-20 left-10" />
+        <SwissCircle className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[50vh] h-[50vh] text-text-primary opacity-[0.015] pointer-events-none" />
+        <SwissLine className="absolute right-12 top-0 w-px h-full bg-border/20" />
+        
+        <div className="fade-up grid-system relative z-10 items-center">
+          <div className="col-span-4 md:col-span-12 lg:col-span-5 text-left space-y-12 mb-16 lg:mb-0">
+            <div>
+              <div className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent mb-6">SOUNDTRACK</div>
+              <h2 className="text-headline tracking-tighter">PLAYLIST SAYA.</h2>
+            </div>
+            
+            <p className="text-lg text-text-secondary leading-relaxed max-w-lg">
+              Berikut adalah beberapa lagu favorit dan musik yang menemani saya saat menulis baris-baris kode, merancang arsitektur database, dan mengasah keterampilan saya. Musik membantu saya mempertahankan fokus dan kreativitas.
+            </p>
+
+            <div className="flex flex-col gap-6 font-mono text-[9px] text-text-muted uppercase tracking-[0.2em]">
+              <div className="flex items-center gap-4">
+                <span className="w-20 text-accent font-bold">PLATFORM:</span>
+                <span>SPOTIFY PREMIUM</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="w-20 text-accent font-bold">PLAYLIST ID:</span>
+                <span>5KlJLq6QyiuBWvwmnC3kvi</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="w-20 text-accent font-bold">SUMBER:</span>
+                <a href="https://open.spotify.com/playlist/5KlJLq6QyiuBWvwmnC3kvi?si=af8c0f326b544ef3" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline transition-colors">BUKA DI APLIKASI</a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-6 mt-12">
+              <SwissLine className="w-32 h-1 bg-accent" />
+              <span className="font-mono text-[8px] text-text-muted tracking-[0.4em]">SOUNDS / CREATIVITY</span>
+            </div>
+          </div>
+
+          <div className="col-span-4 md:col-span-12 lg:col-start-7 lg:col-span-6 relative">
+            <div className="border-4 border-text-primary p-2 bg-black shadow-2xl relative group">
+              <div className="absolute -inset-2 border border-accent/20 pointer-events-none"></div>
+              <iframe 
+                src="https://open.spotify.com/embed/playlist/5KlJLq6QyiuBWvwmnC3kvi?utm_source=generator&theme=0" 
+                width="100%" 
+                height="450" 
+                frameBorder="0" 
+                allowFullScreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"
+                style={{ borderRadius: '0px' }}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section ref={contactReveal} className="py-64 grid-system relative overflow-hidden text-center fade-up transition-colors duration-500">
         <div ref={contactRef} className="absolute top-0 left-0 w-full h-1" />
         <SwissHeadingText text="KONTAK" className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.06]" />
@@ -468,7 +527,7 @@ export default function Home() {
 
         <div className="col-span-4 md:col-span-12 lg:col-start-3 lg:col-span-8 space-y-16 z-10">
           <div className="flex flex-col items-center gap-6">
-             <SwissDataLabel label="Koneksi" value="KOLABORASI_AKTIF" className="items-center" />
+             <SwissDataLabel label="Koneksi" value="PESAN_LANGSUNG" className="items-center" />
           </div>
           <h2 className="text-display leading-[0.8] mb-12 uppercase tracking-tighter">HUBUNGI<br /><span className="text-accent">SAYA.</span></h2>
           
