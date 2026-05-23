@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+/* ============================================
+   REFINED SWISS INDUSTRIAL SYSTEM
+   ============================================ */
+
+@theme {
+  --color-bg-primary: #0A0A0A;
+  --color-bg-secondary: #111111;
+  --color-bg-elevated: #161616;
+  
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #999999;
+  --color-text-muted: #555555;
+
+  --color-accent: #0055D4; 
+  --color-accent-soft: rgba(0, 85, 212, 0.08);
+
+  --color-border: #222222;
+  
+  --font-sans: 'Urbanist', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.light {
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F8F8F8;
+  --color-bg-elevated: #EEEEEE;
+  
+  --color-text-primary: #000000;
+  --color-text-secondary: #444444;
+  --color-text-muted: #888888;
+
+  --color-border: #E0E0E0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html.lenis-stopped {
+    overflow: hidden !important;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased selection:bg-accent selection:text-white;
+    line-height: 1.1;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.lenis-stopped {
+    overflow: hidden !important;
+  }
+
+  /* Structural Grid Background */
+  body::before {
+    content: "";
+    @apply fixed inset-0 opacity-[0.2] pointer-events-none z-[-1];
+    background-image: 
+      linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+}
+
+@layer components {
+  .text-display {
+    @apply text-[clamp(3.5rem,14vw,10rem)] font-black uppercase leading-[0.85] tracking-[-0.04em];
+  }
+
+  .text-headline {
+    @apply text-[clamp(2.5rem,7vw,5rem)] font-black uppercase leading-[0.9] tracking-[-0.03em];
+  }
+
+  .section-tag {
+    @apply font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent flex items-center gap-3;
+  }
+  
+  .section-tag::before {
+    content: "";
+    @apply w-8 h-[1px] bg-accent;
+  }
+
+  .grid-system {
+    @apply grid grid-cols-4 md:grid-cols-12 gap-6 px-6 md:px-12;
+  }
+
+  .magnetic-btn {
+    @apply inline-flex items-center justify-center border-2 border-text-primary px-10 py-5 font-black uppercase tracking-widest text-[11px] transition-all duration-500 hover:bg-accent hover:border-accent;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-bg-secondary;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-border hover:bg-accent transition-colors;
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 
+      opacity 0.8s var(--ease-out-expo),
+      transform 0.8s var(--ease-out-expo);
+    will-change: transform, opacity;
+  }
+
+  .fade-up.visible,
+  .visible .fade-up,
+  .visible.fade-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes fadeBlur {
+    from { opacity: 0; filter: blur(20px); transform: scale(1.02); }
+    to { opacity: 1; filter: blur(0); transform: scale(1); }
+  }
+
+  @keyframes fadeSimple {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-fade-blur {
+    animation: fadeBlur 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-simple {
+    animation: fadeSimple 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
