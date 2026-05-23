@@ -317,7 +317,7 @@ export default function ProjectDetail() {
 
       <footer className="p-10 border-t border-border flex justify-between items-center bg-bg-primary text-[9px] font-black uppercase tracking-[0.5em] text-text-muted opacity-50">
         <span>ANRA // PORTFOLIO</span>
-        <span className="tracking-[0.5em]">HAK CIPTA DILINDUNGI</span>
+        <span className="tracking-[0.5em]">ALL RIGHT RESERVED.</span>
       </footer>
 
     </div>

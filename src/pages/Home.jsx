@@ -307,10 +307,13 @@ export default function Home() {
             <h2 className="text-headline tracking-tighter">LET KNOW <br/>ABOUT <span className="text-accent">ME.</span></h2>
             <div className="space-y-6 text-lg text-text-secondary leading-relaxed">
               <p>
-                Pekerjaan saya didasari oleh kombinasi antara pemecahan masalah yang kompleks dan desain yang fungsional. Sebagai siswa SMK Negeri 1 Denpasar, saya mengembangkan sistem yang andal dan efisien.
+                Halo! Saya I Nyoman Anrasansya Dharma Putra, siswa kelas 11 jurusan Rekayasa Perangkat Lunak (RPL) di SMK Negeri 1 Denpasar yang fokus mendalami pengembangan aplikasi web dan mobile serta aktif mengeksplorasi teknologi baru dalam pembuatan software. Di lingkungan sekolah, saya telah merancang berbagai proyek aplikasi berbasis website dan mengasah kemampuan dalam merancang basis data yang terstruktur dengan baik.
               </p>
               <p>
-                Saya percaya bahwa perangkat lunak modern membutuhkan keseimbangan antara fondasi teknis yang kuat dan eksekusi yang jelas. Saya bertujuan untuk menciptakan kode yang tangguh dan bersih.
+                Pengalaman teknis saya diperkuat melalui program beasiswa Coding Camp Indonesia selama dua tahun berturut-turut (2025–2026), di mana saya berkolaborasi menggunakan metode agile untuk membangun proyek CuanCerdas dan TaruPramana, sekaligus mematangkan pemahaman tech stack seperti React dan Node.js serta melatih keterampilan komunikasi bahasa Inggris.
+              </p>
+              <p>
+                Selain fokus di dunia teknologi, saya juga melatih kapasitas kepemimpinan dan manajerial sebagai Ketua Paskibra Kansa SKENSA untuk periode 2026–2027 setelah sebelumnya sukses bertindak sebagai Wakil Ketua 2, sebuah kombinasi keahlian teknis dan kepemimpinan yang menjadi modal utama saya untuk siap berkontribusi nyata di industri profesional.
               </p>
             </div>
             <div className="flex items-center gap-6 mt-12">
@@ -506,7 +509,7 @@ export default function Home() {
           <span className="hover:text-accent transition-colors cursor-default">© 2026 KOMANGANRASANSYA</span>
         </div>
         <div className="flex items-center gap-3">
-          <span>ALL RIGHT RESERVED</span>
+          <span>ALL RIGHT RESERVED.</span>
         </div>
       </footer>
 
