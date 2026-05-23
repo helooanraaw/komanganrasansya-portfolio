@@ -533,6 +533,7 @@ export default function Home() {
             <div className="border-4 border-text-primary p-2 bg-black shadow-2xl relative group">
               <div className="absolute -inset-2 border border-accent/20 pointer-events-none"></div>
               <iframe 
+                key={spotifyEmbedUrl}
                 src={spotifyEmbedUrl} 
                 width="100%" 
                 height="450" 
