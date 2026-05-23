@@ -473,17 +473,7 @@ export default function Home() {
           <div className="col-span-4 md:col-span-12 lg:col-span-5 text-left space-y-8 mb-16 lg:mb-0">
             <div>
               <div className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent mb-6">SOUNDTRACK</div>
-              <div className="flex justify-between items-end gap-4">
-                <h2 className="text-headline tracking-tighter">PLAYLIST SPOTIFY.</h2>
-                {spotifyEmbedUrl !== 'https://open.spotify.com/embed/playlist/5KlJLq6QyiuBWvwmnC3kvi?utm_source=generator&theme=0' && (
-                  <button 
-                    onClick={() => setSpotifyEmbedUrl('https://open.spotify.com/embed/playlist/5KlJLq6QyiuBWvwmnC3kvi?utm_source=generator&theme=0')}
-                    className="font-mono text-[9px] text-accent hover:underline uppercase tracking-widest cursor-pointer mb-2"
-                  >
-                    &larr; PLAYLIST_UTAMA
-                  </button>
-                )}
-              </div>
+              <h2 className="text-headline tracking-tighter">PLAYLIST SPOTIFY.</h2>
             </div>
             
             <p className="text-sm text-text-secondary leading-relaxed max-w-lg">
