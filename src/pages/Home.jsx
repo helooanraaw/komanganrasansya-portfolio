@@ -483,10 +483,10 @@ export default function Home() {
               <div className="font-mono text-[9px] text-accent font-bold uppercase tracking-[0.3em]">LAGU FAVORIT :</div>
               <div className="space-y-3">
                 {[
-                  { rank: '01', title: 'Apocalypse', artist: 'Cigarettes After Sex' },
-                  { rank: '02', title: 'K.', artist: 'Cigarettes After Sex' },
-                  { rank: '03', title: 'Sunsetz', artist: 'Cigarettes After Sex' },
-                  { rank: '04', title: 'Cry', artist: 'Cigarettes After Sex' }
+                  { rank: '01', title: 'Apocalypse', artist: 'Cigarettes After Sex', genre: 'DREAM POP', color: 'text-pink-400 border-pink-400/30 bg-pink-400/5' },
+                  { rank: '02', title: 'K.', artist: 'Cigarettes After Sex', genre: 'SLOWCORE', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
+                  { rank: '03', title: 'Sunsetz', artist: 'Cigarettes After Sex', genre: 'INDIE POP', color: 'text-amber-500 border-amber-500/30 bg-amber-500/5' },
+                  { rank: '04', title: 'Cry', artist: 'Cigarettes After Sex', genre: 'AMBIENT', color: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/5' }
                 ].map((track) => (
                   <div key={track.rank} className="flex justify-between items-center py-2 border-b border-border/20 group/track">
                     <div className="flex gap-4 items-center">
@@ -496,8 +496,8 @@ export default function Home() {
                         <div className="text-[9px] text-text-muted uppercase tracking-widest mt-0.5">{track.artist}</div>
                       </div>
                     </div>
-                    <span className="font-mono text-[7px] text-accent opacity-0 group-hover/track:opacity-100 transition-opacity uppercase tracking-widest border border-accent/30 px-2 py-0.5">
-                      FAVORITE
+                    <span className={`font-mono text-[7px] opacity-75 group-hover/track:opacity-100 group-hover/track:scale-105 transition-all duration-300 uppercase tracking-widest border px-2 py-0.5 ${track.color}`}>
+                      {track.genre}
                     </span>
                   </div>
                 ))}
