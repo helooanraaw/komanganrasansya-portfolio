@@ -483,11 +483,11 @@ export default function Home() {
               <div className="font-mono text-[9px] text-accent font-bold uppercase tracking-[0.3em]">LAGU FAVORIT :</div>
               <div className="space-y-3">
                 {[
-                  { rank: '01', title: 'Shape Of My Heart', artist: 'Backstreet Boys', genre: 'POP', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
-                  { rank: '02', title: 'My Love', artist: 'Westlife', genre: 'BALLAD', color: 'text-pink-400 border-pink-400/30 bg-pink-400/5' },
-                  { rank: '03', title: 'I Lay My Love On You (Remix)', artist: 'Westlife', genre: 'DANCE', color: 'text-purple-400 border-purple-400/30 bg-purple-400/5' },
+                  { rank: '01', title: 'Shape Of My Heart', artist: 'Backstreet Boys', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
+                  { rank: '02', title: 'My Love', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
+                  { rank: '03', title: 'I Lay My Love On You (Remix)', artist: 'Westlife', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' },
                   { rank: '04', title: 'Natural', artist: 'D\'Masiv', genre: 'POP ROCK', color: 'text-amber-500 border-amber-500/30 bg-amber-500/5' },
-                  { rank: '05', title: 'Did You Like Her In The Morning?', artist: 'NIKI', genre: 'R&B', color: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/5' }
+                  { rank: '05', title: 'Did You Like Her In The Morning?', artist: 'NIKI', genre: 'POP BALLAD', color: 'text-indigo-400 border-indigo-400/30 bg-indigo-400/5' }
                 ].map((track) => (
                   <div key={track.rank} className="flex justify-between items-center py-2 border-b border-border/20 group/track">
                     <div className="flex gap-4 items-center">
