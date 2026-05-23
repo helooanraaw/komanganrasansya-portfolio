@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { useScrollReveal, useStaggerReveal } from '../hooks/useScrollReveal'
 import { 
@@ -83,6 +83,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true)
   const [isLightMode, setIsLightMode] = useState(false)
   const [spotifyEmbedUrl, setSpotifyEmbedUrl] = useState('https://open.spotify.com/embed/playlist/5KlJLq6QyiuBWvwmnC3kvi?utm_source=generator&theme=0')
+  const navigate = useNavigate()
 
   const heroReveal = useScrollReveal()
   const aboutReveal = useScrollReveal()
@@ -371,7 +372,12 @@ export default function Home() {
         ) : (
           <div ref={projectsReveal} className="grid-system gap-y-12">
             {projects.map((proj, idx) => (
-              <Link key={proj.id} to={`/project/${proj.id}`} className={`fade-up stagger-${(idx % 3) + 1} col-span-4 md:col-span-6 lg:col-span-4 group cursor-pointer`} style={{ '--color-accent': proj.hover_color || '#0055D4' }}>
+              <div 
+                key={proj.id} 
+                onClick={() => navigate(`/project/${proj.id}`)} 
+                className={`fade-up stagger-${(idx % 3) + 1} col-span-4 md:col-span-6 lg:col-span-4 group cursor-pointer`} 
+                style={{ '--color-accent': proj.hover_color || '#0055D4' }}
+              >
                 <div className="bg-bg-secondary border border-border h-full flex flex-col transition-all duration-500 hover:border-accent relative text-left overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
                   <div className="relative aspect-video overflow-hidden border-b border-border bg-bg-elevated">
@@ -388,7 +394,7 @@ export default function Home() {
                     )}
                   </div>
                   <div className="p-10 flex-grow flex flex-col justify-between relative">
-                    <SwissCircle className="absolute -bottom-4 -right-4 w-24 h-24 text-text-primary opacity-[0.04] group-hover:text-accent/5 transition-colors" />
+                    <SwissCircle className="absolute -bottom-4 -right-4 w-24 h-24 text-text-primary opacity-[0.04] group-hover:text-accent group-hover:opacity-[0.08] transition-all duration-300 pointer-events-none" />
                     <div className="space-y-6">
                       <h3 className="text-3xl font-black uppercase tracking-tighter leading-none group-hover:text-accent transition-colors">{proj.title}</h3>
                       <p className="text-sm text-text-secondary leading-relaxed line-clamp-3">{proj.description}</p>
@@ -399,14 +405,26 @@ export default function Home() {
                           <span key={t} className="text-[8px] font-bold text-text-muted uppercase tracking-widest border border-border px-2 py-0.5">{t}</span>
                         ))}
                       </div>
-                      <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
+                      <div className="flex items-center gap-2 relative z-30" onClick={(e) => e.stopPropagation()}>
                         {proj.repo_link && (
-                          <a href={proj.repo_link} target="_blank" rel="noopener noreferrer" className="p-3 border border-border hover:bg-accent hover:border-accent transition-all duration-300 group-hover:text-white" title="Repositori">
+                          <a 
+                            href={proj.repo_link} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="inline-flex items-center justify-center w-10 h-10 border border-border hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 text-text-primary" 
+                            title="Repositori"
+                          >
                             <Github size={18} />
                           </a>
                         )}
                         {proj.demo_link && (
-                          <a href={proj.demo_link} target="_blank" rel="noopener noreferrer" className="p-3 border border-border hover:bg-accent hover:border-accent transition-all duration-300 group-hover:text-white" title="Demo Langsung">
+                          <a 
+                            href={proj.demo_link} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="inline-flex items-center justify-center w-10 h-10 border border-border hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 text-text-primary" 
+                            title="Demo Langsung"
+                          >
                             <ArrowUpRight size={18} />
                           </a>
                         )}
@@ -414,7 +432,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         )}
