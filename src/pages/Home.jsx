@@ -520,43 +520,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="pt-6 border-t border-border/20 space-y-6">
-              <div className="font-mono text-[9px] text-accent font-bold uppercase tracking-[0.3em]">ANALISIS AUDIO PLAYLIST :</div>
-              
-              <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-                {[
-                  { label: 'Tempo', value: '98 BPM', percent: '40%' },
-                  { label: 'Energi', value: 'Melankolis (45%)', percent: '45%' },
-                  { label: 'Akustik', value: 'Tinggi (78%)', percent: '78%' },
-                  { label: 'Keceriaan', value: 'Sedih/Mellow (35%)', percent: '35%' }
-                ].map((stat) => (
-                  <div key={stat.label} className="space-y-2">
-                    <div className="flex justify-between font-mono text-[8px] tracking-wider text-text-secondary uppercase">
-                      <span>{stat.label}</span>
-                      <span className="text-accent font-bold">{stat.value}</span>
-                    </div>
-                    <div className="h-1.5 w-full bg-border/20 relative overflow-hidden">
-                      <div className="absolute top-0 left-0 h-full bg-accent transition-all duration-1000" style={{ width: stat.percent }}></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex items-center gap-2 pt-2">
-                <div className="flex items-end gap-1 h-6">
-                  {[4, 8, 2, 7, 5, 9, 3, 6, 8, 4, 7, 5].map((h, i) => (
-                    <div 
-                      key={i} 
-                      className="w-1 bg-accent/40 animate-pulse rounded-full" 
-                      style={{ 
-                        height: `${h * 10}%`, 
-                        animationDelay: `${i * 150}ms`,
-                        animationDuration: '1.2s'
-                      }} 
-                    />
-                  ))}
-                </div>
-                <span className="font-mono text-[8px] text-text-muted uppercase tracking-[0.3em] ml-2">AUDIO_STREAM_ACTIVE</span>
+            <div className="flex gap-8 pt-6 font-mono text-[9px] text-text-muted uppercase tracking-[0.2em] border-t border-border/20">
+              <div>
+                <span className="text-accent font-bold">TOTAL:</span> 451 LAGU
               </div>
             </div>
 
