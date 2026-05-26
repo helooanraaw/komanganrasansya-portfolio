@@ -219,7 +219,7 @@ export default function ProjectDetail() {
             )}
             
             <div className="absolute top-8 left-8 font-mono text-[10px] bg-bg-primary/90 px-4 py-2 border border-border uppercase tracking-widest backdrop-blur-sm z-20">
-              Visualisasi {activeImage + 1} / {allImages.length}
+              {/* Visualisasi {activeImage + 1} / {allImages.length} */}
             </div>
           </div>
 
