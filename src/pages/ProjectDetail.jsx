@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { 
   ArrowLeft, ArrowUpRight, Github, 
-  ChevronRight, ChevronLeft, Gamepad2
+  ChevronRight, ChevronLeft
 } from 'lucide-react'
 
 const getProjectType = (title) => {
@@ -21,6 +21,28 @@ const getProjectPlatform = (title) => {
   if (t.includes('skensamoto')) return 'Web App (Local Server)';
   if (t.includes('banaspati')) return 'Web / Scratch Playable';
   return 'Web Application';
+}
+
+const isVideo = (url) => {
+  if (!url) return false
+  return url.match(/\.(mp4|webm|ogg|mov)$/i)
+}
+
+const MediaRenderer = ({ url, className }) => {
+  if (isVideo(url)) {
+    return (
+      <video
+        src={url}
+        muted
+        loop
+        autoPlay
+        playsInline
+        disablePictureInPicture
+        className={`${className} object-cover`}
+      />
+    )
+  }
+  return <img src={url} className={`${className} object-cover`} alt="" />
 }
 
 export default function ProjectDetail() {
@@ -62,11 +84,6 @@ export default function ProjectDetail() {
 
   if (!project) return null
 
-  const isVideo = (url) => {
-    if (!url) return false
-    return url.match(/\.(mp4|webm|ogg|mov)$/i)
-  }
-
   const rawMedia = [project.image_url, ...(project.gallery_images || [])].filter(Boolean)
   const allImages = [...rawMedia].sort((a, b) => {
     const aIsVideo = isVideo(a)
@@ -93,23 +110,6 @@ export default function ProjectDetail() {
     setPrevImage(allImages[activeImage])
     setIsNavigating(true)
     setActiveImage(idx)
-  }
-
-  const MediaRenderer = ({ url, className }) => {
-    if (isVideo(url)) {
-      return (
-        <video
-          src={url}
-          muted
-          loop
-          autoPlay
-          playsInline
-          disablePictureInPicture
-          className={`${className} object-cover`}
-        />
-      )
-    }
-    return <img src={url} className={`${className} object-cover`} alt="" />
   }
 
   const handleBack = () => {
@@ -298,12 +298,6 @@ export default function ProjectDetail() {
                   ></iframe>
                </div>
             </div>
-
-            {/* <div className="flex items-center gap-6 font-mono text-[9px] text-text-muted uppercase tracking-[0.3em]">
-               <div className="flex items-center gap-2"><Gamepad2 size={12} className="text-accent" /> Gunakan Kontrol untuk Bermain</div>
-               <div className="w-1 h-1 bg-border rounded-full"></div>
-               <div>Ditanam melalui API Scratch MIT</div>
-            </div> */}
           </div>
         </section>
       )}
